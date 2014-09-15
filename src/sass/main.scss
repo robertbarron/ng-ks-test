@@ -8,14 +8,14 @@
  * First, we include the Font Awesome SASS FILES. Only the ones used in the
  * project should be imported as the rest are just wasting space.
  */
-@import '../../vendor/fontawesome/scss/font-awesome.scss';
+@import "../../vendor/fontawesome/scss/font-awesome.scss";
 /**
  * First, we include the Twitter Bootstrap LESS files. Only the ones used in the
  * project should be imported as the rest are just wasting space.
  */
 
 
-@import '../../vendor/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss';
+@import "../../vendor/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 
 
 /**
@@ -23,7 +23,7 @@
  * definitions in our imported stylesheets.
  */
 
-@import 'variables.sass';
+@import "variables.scss";
 
 
 /**
@@ -31,7 +31,7 @@
  */
 
 @font-face {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   src: local('Roboto Regular'), local('Roboto-Regular'), url(fonts/Roboto-Regular.woff) format('woff');
