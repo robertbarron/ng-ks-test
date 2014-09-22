@@ -1,0 +1,25 @@
+#welcome {
+	font-family: "Open Sans", sans-serif;
+	background: url(http://jpload.robertobarron.com/images/first-div.jpg) fixed center top no-repeat;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	padding-top: 200px;
+	padding-bottom: 200px;
+	font-weight: 100;
+
+	background-size: cover;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	
+	#welcome-container {
+		#welcome-message {
+			padding: 30px 10px;
+			font-weight: 900;
+		}
+		button {
+			font-weight: 100;
+		}
+	}
+}

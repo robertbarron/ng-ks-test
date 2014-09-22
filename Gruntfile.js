@@ -121,7 +121,7 @@ module.exports = function ( grunt ) {
       build_appjs: {
         files: [
           {
-            src: [ '<%= app_files.js %>' ],
+            src: [ '<%= app_files.js %>'],
             dest: '<%= build_dir %>/',
             cwd: '.',
             expand: true
@@ -553,8 +553,9 @@ module.exports = function ( grunt ) {
     'clean', 'html2js', 'jshint', 'coffeelint', 'coffee', 'concat:build_css',
     'sass:build', 'copy:build_app_assets', 'copy:build_vendor_assets',
     'copy:build_appjs', 'copy:build_vendorjs', 'index:build', 'karmaconfig',
-    'karma:continuous' 
+    'karma:continuous'
   ]);
+  //REMOVED karma:continuous from this build
 
   /**
    * The `compile` task gets your app ready for deployment by concatenating and
@@ -596,9 +597,12 @@ module.exports = function ( grunt ) {
     var cssFiles = filterForCSS( this.filesSrc ).map( function ( file ) {
       return file.replace( dirRE, '' );
     });
-
+    grunt.log.writeln('>>>>>>> ' + dirRE);
+    grunt.log.writeln('>>>>>>> ' + this.data.dir);
     grunt.file.copy('src/index.html', this.data.dir + '/index.html', { 
       process: function ( contents, path ) {
+        grunt.log.writeln('>>>>>js: ' + jsFiles);
+        grunt.log.writeln('>>>>>css: ' + cssFiles);
         return grunt.template.process( contents, {
           data: {
             scripts: jsFiles,

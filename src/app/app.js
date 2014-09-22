@@ -1,8 +1,8 @@
-angular.module( 'rb-app', [
-  // 'templates-app',
-  // 'templates-common',
-  // 'ngBoilerplate.home',
-  // 'ngBoilerplate.about',
+angular.module( 'yb-app', [
+  'templates-app',
+  'templates-common',
+  'yb-app.home',
+  'yb-app.welcome',
   'ui.router'
 ])
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider ) {
@@ -10,13 +10,11 @@ angular.module( 'rb-app', [
 })
 .run( function run () {
 })
-.controller( 'AppCtrl', function AppCtrl ( $scope, $location ) {
+.controller( 'ybAppCtrl', function ybAppCtrl ( $scope, $location ) {
   $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
     if ( angular.isDefined( toState.data.pageTitle ) ) {
       $scope.pageTitle = toState.data.pageTitle + ' | ngBoilerplate' ;
     }
   });
-})
-
-;
+});
 

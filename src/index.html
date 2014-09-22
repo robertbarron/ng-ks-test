@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="rb-app" ng-controller="AppCtrl">
+<html ng-app="yb-app" ng-controller="ybAppCtrl">
   <head>
     <title ng-bind="pageTitle"></title>
     <meta charset="utf-8">
@@ -23,17 +23,18 @@
     <meta property="og:type" content="website" />
     <meta property="og:description" content="Roberto Barron | Full Stack Web Developer.">
 
+    <!-- Fonts linked from google -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
     <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
     <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
 
     <!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
     <script type="text/javascript" src="<%= file %>"></script><% }); %>
-
-    <!-- it's stupid to have to load it here, but this is for the +1 button -->
-    <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
-      { "parsetags": "explicit" }
-    </script>
   </head>
   <body>
+    <div class="container">
+        <div class="container" ui-view="main"></div>
+    </div>
   </body>
 </html>
